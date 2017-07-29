@@ -4,9 +4,10 @@ from character_generator import Character
 
 character = Character()
 
-race = "human"
+ancestry = "changeling"
 
-attributes = character.generate_race(race)
+
+attributes = character.generate_ancestry(ancestry)
 
 strength = attributes["strength"]
 agility = attributes["agility"]
@@ -23,8 +24,16 @@ damage = attributes["damage"]
 insanity = attributes["insanity"]
 corruption = attributes["corruption"]
 language = attributes["languages"]
-background = character.generate_random(race, "_background" , "1d20")
-personality = character.generate_random(race, "_personality", "3d6")
+background = character.generate_random(ancestry, "_background" , "1d20").encode("utf-8")
+personality = character.generate_random(ancestry, "_personality", "3d6").encode("utf-8")
+religion = character.generate_random(ancestry, "_religion", "3d6").encode("utf-8")
+age = character.generate_random(ancestry, "_age", "3d6").encode("utf-8")
+build = character.generate_random(ancestry, "_build", "3d6").encode("utf-8")
+appearence = character.generate_random(ancestry, "_appearence", "3d6").encode("utf-8")
+true_age = character.generate_random(ancestry, "_true_age", "3d6").encode("utf-8")
+apparent_gender = character.generate_random(ancestry, "_apparent_gender", "1d6").encode("utf-8")
+apparent_ancestry = character.generate_random(ancestry, "_apparent_ancestry", "3d6").encode("utf-8")
+quirk = character.generate_random(ancestry, "_quirk", "1d20").encode("utf-8")
 
 print "Strength" + ": " + strength
 print "Agility" + ": " + agility
@@ -43,3 +52,14 @@ print "Corruption" + ": " + corruption
 print "Languages" + ": " + language
 print "Background" + ": " + background
 print "Personality" + ": " + personality
+
+if ancestry == "human":
+    print "Religion" + ": " + religion
+    print "Age" + ": " + age
+    print "Build" + ": " + build
+    print "Appearence" + ": " + appearence
+elif ancestry == "changeling":
+    print "True Age" + ": " + true_age
+    print "Apparent Gender" + ": " + apparent_gender
+    print "Apparent Ancestry" + ": " + apparent_ancestry
+    print "Quirk" + ": " + quirk
