@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from character_generator import Character
+import sys
 
 character = Character()
 
-ancestry = "changeling"
-
+ancestry = sys.argv[1]
 
 attributes = character.generate_ancestry(ancestry)
 
@@ -63,3 +63,11 @@ elif ancestry == "changeling":
     print "Apparent Gender" + ": " + apparent_gender
     print "Apparent Ancestry" + ": " + apparent_ancestry
     print "Quirk" + ": " + quirk
+elif ancestry == "clockwork":
+    print "Clockwork"
+elif ancestry == "dwarf":
+    print "Dwarf"
+elif ancestry == "goblin":
+    print "Goblin"
+elif ancestry == "orc":
+    print "Orc"
