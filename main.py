@@ -34,37 +34,40 @@ true_age = character.generate_random(ancestry, "_true_age", "3d6").encode("utf-8
 apparent_gender = character.generate_random(ancestry, "_apparent_gender", "1d6").encode("utf-8")
 apparent_ancestry = character.generate_random(ancestry, "_apparent_ancestry", "3d6").encode("utf-8")
 quirk = character.generate_random(ancestry, "_quirk", "1d20").encode("utf-8")
+form = character.generate_random(ancestry, "_form", "3d6").encode("utf-8")
+purpose = character.generate_random(ancestry, "_purpose", "1d20").encode("utf-8")
 
-print "Strength" + ": " + strength
-print "Agility" + ": " + agility
-print "Intelect" + ": " + intelect
-print "Will" + ": " + will
-print "Perception" + ": " + intelect
-print "Defense" + ": " + agility
-print "Health" + ": " + health
-print "Healing Rate" + ": " + healing_rate
-print "Size" + ": " + size
-print "Speed" + ": " + speed
-print "Power" + ": " + power
-print "Damage" + ": " + damage
-print "Insanity" + ": " + insanity
-print "Corruption" + ": " + corruption
-print "Languages" + ": " + language
-print "Background" + ": " + background
-print "Personality" + ": " + personality
+print "Strength: " + strength
+print "Agility: " + agility
+print "Intelect: " + intelect
+print "Will: " + will
+print "Perception: " + intelect
+print "Defense: " + agility
+print "Health: " + health
+print "Healing Rate: " + healing_rate
+print "Size: " + size
+print "Speed: " + speed
+print "Power: " + power
+print "Damage: " + damage
+print "Insanity: " + insanity
+print "Corruption: " + corruption
+print "Languages: " + language
+print "Background: " + background
+print "Personality: " + personality
 
 if ancestry == "human":
-    print "Religion" + ": " + religion
-    print "Age" + ": " + age
-    print "Build" + ": " + build
-    print "Appearence" + ": " + appearence
+    print "Religion: " + religion
+    print "Age: " + age
+    print "Build: " + build
+    print "Appearence: " + appearence
 elif ancestry == "changeling":
-    print "True Age" + ": " + true_age
-    print "Apparent Gender" + ": " + apparent_gender
-    print "Apparent Ancestry" + ": " + apparent_ancestry
+    print "True Age: " + true_age
+    print "Apparent Gender: " + apparent_gender
+    print "Apparent Ancestry: " + apparent_ancestry
     print "Quirk" + ": " + quirk
 elif ancestry == "clockwork":
-    print "Clockwork"
+    print "Form: " + form
+    print "Purpose: " + purpose
 elif ancestry == "dwarf":
     print "Dwarf"
 elif ancestry == "goblin":
