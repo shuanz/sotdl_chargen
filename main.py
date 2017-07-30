@@ -36,6 +36,7 @@ apparent_ancestry = character.generate_random(ancestry, "_apparent_ancestry", "3
 quirk = character.generate_random(ancestry, "_quirk", "1d20").encode("utf-8")
 form = character.generate_random(ancestry, "_form", "3d6").encode("utf-8")
 purpose = character.generate_random(ancestry, "_purpose", "1d20").encode("utf-8")
+hatred = character.generate_random(ancestry, "_hatred", "1d20").encode("utf-8")
 
 print "Strength: " + strength
 print "Agility: " + agility
@@ -69,7 +70,12 @@ elif ancestry == "clockwork":
     print "Form: " + form
     print "Purpose: " + purpose
 elif ancestry == "dwarf":
-    print "Dwarf"
+    print "Age: " + age
+    print "Appearence: " + appearence
+    print "Background: " + background
+    print "Build: " + build
+    print "Hatred: " + hatred
+    print "Personality: " + personality
 elif ancestry == "goblin":
     print "Goblin"
 elif ancestry == "orc":
