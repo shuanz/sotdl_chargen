@@ -24,19 +24,25 @@ damage = attributes["damage"]
 insanity = attributes["insanity"]
 corruption = attributes["corruption"]
 language = attributes["languages"]
-background = character.generate_random(ancestry, "_background" , "1d20").encode("utf-8")
-personality = character.generate_random(ancestry, "_personality", "3d6").encode("utf-8")
-religion = character.generate_random(ancestry, "_religion", "3d6").encode("utf-8")
-age = character.generate_random(ancestry, "_age", "3d6").encode("utf-8")
-build = character.generate_random(ancestry, "_build", "3d6").encode("utf-8")
-appearence = character.generate_random(ancestry, "_appearence", "3d6").encode("utf-8")
-true_age = character.generate_random(ancestry, "_true_age", "3d6").encode("utf-8")
-apparent_gender = character.generate_random(ancestry, "_apparent_gender", "1d6").encode("utf-8")
-apparent_ancestry = character.generate_random(ancestry, "_apparent_ancestry", "3d6").encode("utf-8")
-quirk = character.generate_random(ancestry, "_quirk", "1d20").encode("utf-8")
-form = character.generate_random(ancestry, "_form", "3d6").encode("utf-8")
-purpose = character.generate_random(ancestry, "_purpose", "1d20").encode("utf-8")
-hatred = character.generate_random(ancestry, "_hatred", "1d20").encode("utf-8")
+background = character.generate_random(ancestry, "_background" , "1d20")
+personality = character.generate_random(ancestry, "_personality", "3d6")
+religion = character.generate_random(ancestry, "_religion", "3d6")
+age = character.generate_random(ancestry, "_age", "3d6")
+build = character.generate_random(ancestry, "_build", "3d6")
+appearence = character.generate_random(ancestry, "_appearence", "3d6")
+true_age = character.generate_random(ancestry, "_true_age", "3d6")
+apparent_gender = character.generate_random(ancestry, "_apparent_gender", "1d6")
+apparent_ancestry = character.generate_random(ancestry, "_apparent_ancestry", "3d6")
+quirk = character.generate_random(ancestry, "_quirk", "1d20")
+form = character.generate_random(ancestry, "_form", "3d6")
+purpose = character.generate_random(ancestry, "_purpose", "1d20")
+hatred = character.generate_random(ancestry, "_hatred", "1d20")
+diistinctive_appearence = character.generate_random(ancestry, "_distinctive_appearence", "1d20")
+odd_habit = character.generate_random(ancestry, "_odd_habit", "1d20")
+profession_type, profession = character.generate_profession()
+wealth = character.generate_wealth()
+interesting_thing = character.generate_interesting_things()
+positive_trait_a, positive_trait_b, negative_trait = character.generate_personality_traits()
 
 print "Strength: " + strength
 print "Agility: " + agility
@@ -55,6 +61,12 @@ print "Corruption: " + corruption
 print "Languages: " + language
 print "Background: " + background
 print "Personality: " + personality
+print "Profession Type: " + profession_type
+print "Profession: " + profession
+print "Wealth: " + wealth
+print "Interesting Thing: " + interesting_thing
+print "Positive Traits: " + positive_trait_a + ", " + positive_trait_b
+print "Negative Trait: " + negative_trait
 
 if ancestry == "human":
     print "Religion: " + religion
@@ -72,11 +84,14 @@ elif ancestry == "clockwork":
 elif ancestry == "dwarf":
     print "Age: " + age
     print "Appearence: " + appearence
-    print "Background: " + background
     print "Build: " + build
     print "Hatred: " + hatred
-    print "Personality: " + personality
 elif ancestry == "goblin":
-    print "Goblin"
+    print "Age: " + age
+    print "Build: " + build
+    print "Distinctive Appearance: " + diistinctive_appearence
+    print "Odd Habit: " + odd_habit
 elif ancestry == "orc":
-    print "Orc"
+    print "Build: " + build
+    print "Age: " + age
+    print "Appearence: " + appearence
