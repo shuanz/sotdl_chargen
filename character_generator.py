@@ -37,8 +37,12 @@ class Character():
         profession_number = str(int(dice.roll("1d20")))
         professions_dict = {"1": "academic", "2": "common", "3": "criminal", "4": "martial", "5": "religious", "6": "wilderness"}
         try:
-            profession_type = import_file.json_file(".\\professions\\profession_type.json")[type_number]
-            profession = import_file.json_file(".\\professions\\" + professions_dict[type_number] + ".json")[profession_number]
+            if os.name == "posix":
+                profession_type = import_file.json_file("./professions/profession_type.json")[type_number]
+                profession = import_file.json_file("./professions/" + professions_dict[type_number] + ".json")[profession_number]
+            else:
+                profession_type = import_file.json_file(".\\professions\\profession_type.json")[type_number]
+                profession = import_file.json_file(".\\professions\\" + professions_dict[type_number] + ".json")[profession_number]
         except (UnicodeEncodeError):
             return ""
         else:
@@ -47,7 +51,10 @@ class Character():
     def generate_wealth(self):
         number = str(int(dice.roll("3d6")))
         try:
-            wealth = import_file.json_file(".\\wealth\\wealth.json")[number]
+            if os.name == "posix":
+                wealth = import_file.json_file("./wealth/wealth.json")[number]
+            else:
+                wealth = import_file.json_file(".\\wealth\\wealth.json")[number]
         except (UnicodeEncodeError):
             return ""
         else:
@@ -58,7 +65,10 @@ class Character():
         json_file = "table_" + table_number + ".json"
         interesting_things_number = str(int(dice.roll("1d20")))
         try:
-            interesting_thing = import_file.json_file(".\\interesting_things\\table_" + table_number + ".json")[interesting_things_number]
+            if os.name == "posix":
+                interesting_thing = import_file.json_file("./interesting_things/table_" + table_number + ".json")[interesting_things_number]
+            else:
+                interesting_thing = import_file.json_file(".\\interesting_things\\table_" + table_number + ".json")[interesting_things_number]
         except (UnicodeEncodeError):
             return ""
         else:
@@ -69,7 +79,12 @@ class Character():
         positive_number_b = positive_number_a
         while positive_number_a == positive_number_b: positive_number_b = str(int(dice.roll("1d20")))
         negative_number = str(int(dice.roll("1d20")))
-        positive_trait_a = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_a]
-        positive_trait_b = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_b]
-        negative_trait = import_file.json_file(".\\personality_traits\\negative_personality_traits.json")[negative_number]
+        if os.name == "posix":
+            positive_trait_a = import_file.json_file("./personality_traits/positive_personality_traits.json")[positive_number_a]
+            positive_trait_b = import_file.json_file("./personality_traits/positive_personality_traits.json")[positive_number_b]
+            negative_trait = import_file.json_file("./personality_traits/negative_personality_traits.json")[negative_number]
+        else:
+            positive_trait_a = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_a]
+            positive_trait_b = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_b]
+            negative_trait = import_file.json_file(".\\personality_traits\\negative_personality_traits.json")[negative_number]
         return positive_trait_a.encode("utf-8"), positive_trait_b.encode("utf-8"), negative_trait.encode("utf-8")
