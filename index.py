@@ -16,7 +16,7 @@ app = Flask(__name__)
 @app.route("/")
 def create_char():
     character = Character()
-    ancestry_list = ["Human", "Changeling", "Clockwork", "Dwarf", "Orc", "Goblin"]
+    ancestry_list = ["human", "changeling", "clockwork", "dwarf", "orc", "goblin"]
     ancestry = ancestry_list[random.randint(0, len(ancestry_list) - 1)]
     attributes = character.generate_ancestry(ancestry)
     names = attributes["names"]
