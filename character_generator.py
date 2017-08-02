@@ -11,7 +11,7 @@ class Character():
 
     def generate_ancestry(self, ancestry):
         if os.name == "posix":
-            attribute_list = import_file.json_file("/ancestries" + "/" +
+            attribute_list = import_file.json_file("ancestries" + "/" +
             ancestry + "/" + ancestry + extension)
         else:
             attribute_list = import_file.json_file(".\\ancestries" + "\\" +
