@@ -1,8 +1,8 @@
 {
-  "1": "Academic. You are a scholar. You can read and write in one language you know how to speak. Roll a d20 and consult the 'Academic Professions' table to determine your area of scholarship. You can recall  information related to your area of scholarship.",
-  "2": "Common. You work in a trade. Roll a d20 and consult the “Common Professions” table to determine your trade. You can recall information  related to your trade and, if your trade involves manufacturing, you know how to produce goods  related to your trade from raw materials.",
-  "3": "Criminal. You engage in illegal or illicit activities. Rol a d20 and consult the “Criminal Professions” table to determine your profession.",
-  "4": "Martial. You joined the army, law enforcement, or the local militia. Roll a d20 and consult the “Martial  Professions” table to determine your profession.",
-  "5": "Religious. You belong to a religious institution. Roll a  d20 and consult the “Religious Professions” table to  determine your profession.",
-  "6": "Wilderness. You live beyond civilization’s bounds.  Roll a d20 and consult the “Wilderness"
+  "1": "Academic. You are a scholar. You can read and write in one language you know how to speak. You can recall  information related to your area of scholarship.",
+  "2": "Common. You work in a trade. You can recall information  related to your trade and, if your trade involves manufacturing, you know how to produce goods  related to your trade from raw materials.",
+  "3": "Criminal. You engage in illegal or illicit activities.",
+  "4": "Martial. You joined the army, law enforcement, or the local militia.",
+  "5": "Religious. You belong to a religious institution.",
+  "6": "Wilderness. You live beyond civilization's bounds"
 }

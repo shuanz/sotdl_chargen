@@ -27,10 +27,10 @@ class Character():
             else:
                 background = import_file.json_file(".\\ancestries" + "\\" +
                 ancestry + "\\" + ancestry + list_type + extension)[number]
-        except (SyntaxError, IOError, UnicodeEncodeError):
+        except (SyntaxError, IOError):
             return ""
         else:
-            return background.encode("utf-8")
+            return background#.encode("utf-8")
 
     def generate_profession(self):
         type_number = str(int(dice.roll("1d6")))
@@ -43,10 +43,10 @@ class Character():
             else:
                 profession_type = import_file.json_file(".\\professions\\profession_type.json")[type_number]
                 profession = import_file.json_file(".\\professions\\" + professions_dict[type_number] + ".json")[profession_number]
-        except (UnicodeEncodeError):
+        except ():
             return ""
         else:
-            return profession_type.encode("utf-8"), profession
+            return profession_type, profession
 
     def generate_wealth(self):
         number = str(int(dice.roll("3d6")))
@@ -55,10 +55,10 @@ class Character():
                 wealth = import_file.json_file("./wealth/wealth.json")[number]
             else:
                 wealth = import_file.json_file(".\\wealth\\wealth.json")[number]
-        except (UnicodeEncodeError):
+        except ():
             return ""
         else:
-            return wealth.encode("utf-8")
+            return wealth#.encode("utf-8")
 
     def generate_interesting_things(self):
         table_number = str(int(dice.roll("1d6")))
@@ -69,10 +69,10 @@ class Character():
                 interesting_thing = import_file.json_file("./interesting_things/table_" + table_number + ".json")[interesting_things_number]
             else:
                 interesting_thing = import_file.json_file(".\\interesting_things\\table_" + table_number + ".json")[interesting_things_number]
-        except (UnicodeEncodeError):
+        except ():
             return ""
         else:
-            return interesting_thing.encode("utf-8")
+            return interesting_thing#.encode("utf-8")
 
     def generate_personality_traits(self):
         positive_number_a = str(int(dice.roll("1d20")))
@@ -87,4 +87,4 @@ class Character():
             positive_trait_a = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_a]
             positive_trait_b = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_b]
             negative_trait = import_file.json_file(".\\personality_traits\\negative_personality_traits.json")[negative_number]
-        return positive_trait_a.encode("utf-8"), positive_trait_b.encode("utf-8"), negative_trait.encode("utf-8")
+        return positive_trait_a, positive_trait_b, negative_trait

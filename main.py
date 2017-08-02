@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from character_generator import Character
-import sys
+import sys, random
 
 character = Character()
 
-ancestry = sys.argv[1]
+ancestry_list = ["Human", "Changeling", "Clockwork", "Dwarf", "Orc", "Goblin"]
+ancestry = ancestry_list[random.randint(0, 5)]
 
 attributes = character.generate_ancestry(ancestry)
 
+names = attributes["names"]
+name = names[random.randint(0, len(names) - 1)]
 strength = attributes["strength"]
 agility = attributes["agility"]
 intelect = attributes["intelect"]
@@ -44,6 +47,8 @@ wealth = character.generate_wealth()
 interesting_thing = character.generate_interesting_things()
 positive_trait_a, positive_trait_b, negative_trait = character.generate_personality_traits()
 
+print "Name: " + name
+print "Ancestry: " + ancestry
 print "Strength: " + strength
 print "Agility: " + agility
 print "Intelect: " + intelect

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+<title>SOTDL CHARGEN</title>
+<h1> {{ ancestry }}</h1>
+<p>Strength: {{strength }}</p>
+<p>Agility: {{agility }}</p>
+<p>Intelect: {{intelect }}</p>
+<p>Will: {{will }}</p>
+<p>Perception: {{perception }}</p>
+<p>Defense: {{defense }}</p>
+<p>Health: {{health }}</p>
+<p>Healing rate: {{healing_rate }}</p>
+<p>Size: {{size }}</p>
+<p>Speed: {{speed }}</p>
+<p>Power: {{power }}</p>
+<p>Damage: {{damage }}</p>
+<p>Insanity: {{insanity }}</p>
+<p>Corruption: {{corruption }}</p>
+<p>Language: {{language }}</p>
+<p>Background: {{background }}</p>
+<p>Personality: {{personality }}</p>
+{% if ancestry == "human": %}
+  <p>Religion: {{religion }}</p>
+  <p>Age: {{age }}</p>
+  <p>Build: {{build }}</p>
+  <p>Appearence: {{appearence }}</p>
+{% elif ancestry == "changeling": %}
+  <p>True Age: {{true_age }}</p>
+  <p>Apparent Gender: {{apparent_gender }}</p>
+  <p>Apparent Ancestry: {{apparent_ancestry }}</p>
+  <p>Quirk: {{quirk }}</p>
+{% elif ancestry == "clockwork": %}
+  <p>Form: {{form }}</p>
+  <p>Purpose: {{purpose }}</p>
+{% elif ancestry == "dwarf": %}
+  <p>Age: {{age }}</p>
+  <p>Build: {{build }}</p>
+  <p>Appearence: {{appearence }}</p>
+  <p>Hatred: {{hatred }}</p>
+{% elif ancestry == "goblin": %}
+  <p>Age: {{age }}</p>
+  <p>Build: {{build }}</p>
+  <p>Distinctive Appearence: {{diistinctive_appearence }}</p>
+  <p>Odd Habit: {{odd_habit }}</p>
+{% elif ancestry == "orc": %}
+  <p>Age: {{age }}</p>
+  <p>Build: {{build }}</p>
+  <p>Appearence: {{appearence }}</p>
+{% endif %}
+<p>Profession Type: {{profession_type }}</p>
+<p>Profession: {{profession }}</p>
+<p>Wealth: {{wealth }}</p>
+<p>Interesting Thing: {{interesting_thing }}</p>
+<p>Positive Traits: {{positive_trait_a}} and {{positive_trait_b}}</p>
+<p>Negative Trait: {{negative_trait}}</p>
+</html>

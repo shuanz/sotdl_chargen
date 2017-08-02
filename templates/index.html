@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shadow of the Demon Lord - Level Zero: Character Generator</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Shadow of the Demon Lord - Level Zero: Character Generator</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://github.com/shuanz/sotdl_chargen">Github</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>{{name}}</h1>
+                <p class="lead">{{ ancestry }}</p>
+                <ul class="list-unstyled">
+                  <li><b>Strength:</b> {{strength }}</li>
+                  <li><b>Agility:</b> {{agility }}</li>
+                  <li><b>Intelect:</b> {{intelect }}</li>
+                  <li><b>Will:</b> {{will }}</li>
+                  <li><b>Perception:</b> {{perception }}</li>
+                  <li><b>Defense:</b> {{defense }}</li>
+                  <li><b>Health:</b> {{health }}</li>
+                  <li><b>Healing rate:</b> {{healing_rate }}</li>
+                  <li><b>Size:</b> {{size }}</li>
+                  <li><b>Speed:</b> {{speed }}</li>
+                  <li><b>Power:</b> {{power }}</li>
+                  <li><b>Damage:</b> {{damage }}</li>
+                  <li><b>Insanity:</b> {{insanity }}</li>
+                  <li><b>Corruption:</b> {{corruption }}</li>
+                  <li><b>Language:</b> {{language }}</li>
+                  <li><b>Background:</b> {{background }}</li>
+                  <li><b>Personality:</b> {{personality }}</li>
+                  {% if ancestry == "human": %}
+                    <li><b>Religion:</b> {{religion }}</li>
+                    <li><b>Age:</b> {{age }}</li>
+                    <li><b>Build:</b> {{build }}</li>
+                    <li><b>Appearence:</b> {{appearence }}</li>
+                  {% elif ancestry == "changeling": %}
+                    <li><b>True Age:</b> {{true_age }}</li>
+                    <li><b>Apparent Gender:</b> {{apparent_gender }}</li>
+                    <li><b>Apparent Ancestry:</b> {{apparent_ancestry }}</li>
+                    <li><b>Quirk:</b> {{quirk }}</li>
+                  {% elif ancestry == "clockwork": %}
+                    <li><b>Form:</b> {{form }}</li>
+                    <li><b>Purpose:</b> {{purpose }}</li>
+                  {% elif ancestry == "dwarf": %}
+                    <li><b>Age:</b> {{age }}</li>
+                    <li><b>Build:</b> {{build }}</li>
+                    <li><b>Appearence:</b> {{appearence }}</li>
+                    <li><b>Hatred:</b> {{hatred }}</li>
+                  {% elif ancestry == "goblin": %}
+                    <li><b>Age:</b> {{age }}</li>
+                    <li><b>Build:</b> {{build }}</li>
+                    <li><b>Distinctive Appearence:</b> {{diistinctive_appearence }}</li>
+                    <li><b>Odd Habit:</b> {{odd_habit }}</li>
+                  {% elif ancestry == "orc": %}
+                    <li><b>Age:</b> {{age }}</li>
+                    <li><b>Build:</b> {{build }}</li>
+                    <li><b>Appearence:</b> {{appearence }}</li>
+                  {% endif %}
+                  <li><b>Profession Type:</b> {{profession_type }}</li>
+                  <li><b>Profession:</b> {{profession }}</li>
+                  <li><b>Wealth:</b> {{wealth }}</li>
+                  <li><b>Interesting Thing:</b> {{interesting_thing }}</li>
+                  <li><b>Positive Traits:</b> {{positive_trait_a}} and {{positive_trait_b}}</li>
+                  <li><b>Negative Trait:</b> {{negative_trait}}</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="/static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
