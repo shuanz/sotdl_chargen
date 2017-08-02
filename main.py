@@ -5,7 +5,7 @@ import sys, random
 
 character = Character()
 
-ancestry_list = ["Human", "Changeling", "Clockwork", "Dwarf", "Orc", "Goblin"]
+ancestry_list = ["human", "changeling", "clockwork", "dwarf", "orc", "goblin"]
 ancestry = ancestry_list[random.randint(0, 5)]
 
 attributes = character.generate_ancestry(ancestry)
