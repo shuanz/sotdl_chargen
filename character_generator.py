@@ -11,7 +11,7 @@ class Character():
 
     def generate_ancestry(self, ancestry):
         if os.name == "posix":
-            attribute_list = import_file.json_file("˜/ancestries" + "/" +
+            attribute_list = import_file.json_file("./ancestries" + "/" +
             ancestry + "/" + ancestry + extension)
         else:
             attribute_list = import_file.json_file(".\\ancestries" + "\\" +
@@ -22,7 +22,7 @@ class Character():
         number = str(int(dice.roll(rolling)))
         try:
             if os.name == "posix":
-                background = import_file.json_file("˜/ancestries" + "/" +
+                background = import_file.json_file("./ancestries" + "/" +
                 ancestry + "/" + ancestry + list_type + extension)[number]
             else:
                 background = import_file.json_file(".\\ancestries" + "\\" +
@@ -38,8 +38,8 @@ class Character():
         professions_dict = {"1": "academic", "2": "common", "3": "criminal", "4": "martial", "5": "religious", "6": "wilderness"}
         try:
             if os.name == "posix":
-                profession_type = import_file.json_file("˜/professions/profession_type.json")[type_number]
-                profession = import_file.json_file("˜/professions/" + professions_dict[type_number] + ".json")[profession_number]
+                profession_type = import_file.json_file("./professions/profession_type.json")[type_number]
+                profession = import_file.json_file("./professions/" + professions_dict[type_number] + ".json")[profession_number]
             else:
                 profession_type = import_file.json_file(".\\professions\\profession_type.json")[type_number]
                 profession = import_file.json_file(".\\professions\\" + professions_dict[type_number] + ".json")[profession_number]
@@ -52,7 +52,7 @@ class Character():
         number = str(int(dice.roll("3d6")))
         try:
             if os.name == "posix":
-                wealth = import_file.json_file("˜/wealth/wealth.json")[number]
+                wealth = import_file.json_file("./wealth/wealth.json")[number]
             else:
                 wealth = import_file.json_file(".\\wealth\\wealth.json")[number]
         except ():
@@ -66,7 +66,7 @@ class Character():
         interesting_things_number = str(int(dice.roll("1d20")))
         try:
             if os.name == "posix":
-                interesting_thing = import_file.json_file("˜/interesting_things/table_" + table_number + ".json")[interesting_things_number]
+                interesting_thing = import_file.json_file("./interesting_things/table_" + table_number + ".json")[interesting_things_number]
             else:
                 interesting_thing = import_file.json_file(".\\interesting_things\\table_" + table_number + ".json")[interesting_things_number]
         except ():
@@ -80,9 +80,9 @@ class Character():
         while positive_number_a == positive_number_b: positive_number_b = str(int(dice.roll("1d20")))
         negative_number = str(int(dice.roll("1d20")))
         if os.name == "posix":
-            positive_trait_a = import_file.json_file("˜/personality_traits/positive_personality_traits.json")[positive_number_a]
-            positive_trait_b = import_file.json_file("˜/personality_traits/positive_personality_traits.json")[positive_number_b]
-            negative_trait = import_file.json_file("˜/personality_traits/negative_personality_traits.json")[negative_number]
+            positive_trait_a = import_file.json_file("./personality_traits/positive_personality_traits.json")[positive_number_a]
+            positive_trait_b = import_file.json_file("./personality_traits/positive_personality_traits.json")[positive_number_b]
+            negative_trait = import_file.json_file("./personality_traits/negative_personality_traits.json")[negative_number]
         else:
             positive_trait_a = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_a]
             positive_trait_b = import_file.json_file(".\\personality_traits\\positive_personality_traits.json")[positive_number_b]
